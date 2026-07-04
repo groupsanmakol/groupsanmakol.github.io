@@ -1,15 +1,242 @@
 <!DOCTYPE html>
 <html lang="vi">
+
 <head>
-<meta charset="UTF-8">
-<title>Lấy mã Shopee</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Lấy mã Shopee | SANMAKOL</title>
+
+    <link rel="stylesheet" href="../assets/css/style.css">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 </head>
 
 <body>
 
-<h1>Lấy mã Shopee</h1>
+<header class="topbar">
 
-<p>Đang phát triển...</p>
+    <div class="logo">
+        <a href="/">SANMAKOL</a>
+    </div>
+
+    <nav>
+
+        <a href="/">Trang chủ</a>
+
+        <a class="active" href="/shopee/">
+            Lấy mã Shopee
+        </a>
+
+        <a href="/cashback/">
+            Cashback
+        </a>
+
+        <a href="/customlink/">
+            Tạo Link
+        </a>
+
+    </nav>
+
+</header>
+
+<main>
+
+<section class="page-header">
+
+    <h1>
+        🎁 Lấy mã Shopee
+    </h1>
+
+    <p>
+        Dán link sản phẩm để tạo link lấy mã Facebook / Instagram.
+    </p>
+
+</section>
+
+<section class="tool-card">
+
+    <div class="form-group">
+
+        <label>
+
+            <i class="fa-solid fa-link"></i>
+
+            Link Shopee
+
+        </label>
+
+        <input
+            type="text"
+            id="shopeeLink"
+            placeholder="https://shopee.vn/..."
+        >
+
+    </div>
+
+    <div class="form-group">
+
+        <label>
+
+            <i class="fa-solid fa-mobile-screen"></i>
+
+            Số Zalo (không bắt buộc)
+
+        </label>
+
+        <input
+            type="text"
+            id="subId"
+            placeholder="Nhập số điện thoại"
+        >
+
+    </div>
+
+    <button
+        id="generateBtn"
+        class="btn-primary"
+    >
+
+        <i class="fa-solid fa-bolt"></i>
+
+        TẠO LINK
+
+    </button>
+
+</section>
+
+<section
+    class="result-card"
+    id="resultBox"
+>
+
+    <h2>
+
+        Kết quả
+
+    </h2>
+
+    <div
+        id="statusText"
+        class="status"
+    >
+
+        Chưa có dữ liệu.
+
+    </div>
+
+    <textarea
+        id="outputLink"
+        readonly
+    ></textarea>
+
+    <button
+        id="copyBtn"
+        class="btn-copy"
+        disabled
+    >
+
+        <i class="fa-regular fa-copy"></i>
+
+        Sao chép nội dung
+
+    </button>
+
+    <a
+        class="btn-facebook"
+        href="https://www.facebook.com/share/p/1Cqkr26YVg/"
+        target="_blank"
+    >
+
+        <i class="fa-brands fa-facebook"></i>
+
+        Mở bài viết lấy mã
+
+    </a>
+
+</section>
+
+<section
+    class="backup-card"
+    id="backupBox"
+>
+
+<h2>
+
+Link dự phòng
+
+</h2>
+
+<div class="backup-grid">
+
+<div class="backup-item">
+
+<h3>
+
+Instagram 22%
+
+</h3>
+
+<p>
+
+Dùng khi Facebook hết mã.
+
+</p>
+
+<button id="backupBtn1">
+
+Sao chép
+
+</button>
+
+</div>
+
+<div class="backup-item">
+
+<h3>
+
+Facebook 22%
+
+</h3>
+
+<p>
+
+Dùng khi cần mã dự phòng.
+
+</p>
+
+<button id="backupBtn2">
+
+Sao chép
+
+</button>
+
+</div>
+
+</div>
+
+</section>
+
+</main>
+
+<footer>
+
+© 2026 SANMAKOL
+
+</footer>
+
+<div
+    id="toast"
+    class="toast"
+>
+
+Đã sao chép
+
+</div>
+
+<script src="../assets/js/shopee.js"></script>
 
 </body>
+
 </html>
