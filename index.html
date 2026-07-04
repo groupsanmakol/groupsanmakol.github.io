@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Sanmakol</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial,sans-serif;
+    background:#f4f4f4;
+}
+
+header{
+    background:#ee4d2d;
+    color:#fff;
+    padding:18px;
+    text-align:center;
+    font-size:24px;
+    font-weight:bold;
+}
+
+.container{
+    max-width:1200px;
+    margin:auto;
+    padding:20px;
+}
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:20px;
+}
+
+.card{
+    background:#fff;
+    border-radius:12px;
+    padding:25px;
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+    text-decoration:none;
+    color:#333;
+    transition:.25s;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+}
+
+.card h2{
+    color:#ee4d2d;
+    margin-bottom:10px;
+}
+
+.card p{
+    color:#666;
+    line-height:1.5;
+}
+</style>
+
+</head>
+<body>
+
+<header>
+SANMAKOL
+</header>
+
+<div class="container">
+
+<div class="grid">
+
+<a class="card" href="shopee/">
+<h2>🎟️ Lấy mã Shopee</h2>
+<p>
+Tạo link lấy mã giảm giá Shopee.
+</p>
+</a>
+
+<a class="card" href="cashback/">
+<h2>💰 Cashback</h2>
+<p>
+Kiểm tra hoàn tiền đơn hàng.
+</p>
+</a>
+
+<a class="card" href="customlink/">
+<h2>🔗 Rút gọn link</h2>
+<p>
+Tạo link affiliate rút gọn.
+</p>
+</a>
+
+</div>
+
+</div>
+
+</body>
+</html>
