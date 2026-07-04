@@ -1,1 +1,252 @@
+const API = "https://s.sanmakol.com";
 
+const idBuoc1 = "17188580000";
+const idBackup1 = "17352550103";
+const idBackup2 = "17395740358";
+
+let backupTemplate1 = "";
+let backupTemplate2 = "";
+
+const shopeeLink = document.getElementById("shopeeLink");
+const subId = document.getElementById("subId");
+
+const generateBtn = document.getElementById("generateBtn");
+
+const resultBox = document.getElementById("resultBox");
+const backupBox = document.getElementById("backupBox");
+
+const outputLink = document.getElementById("outputLink");
+
+const statusText = document.getElementById("statusText");
+
+const copyBtn = document.getElementById("copyBtn");
+
+const backupBtn1 = document.getElementById("backupBtn1");
+const backupBtn2 = document.getElementById("backupBtn2");
+
+const toast = document.getElementById("toast");
+
+
+
+shopeeLink.addEventListener("keydown", function (e) {
+
+    if (e.key === "Enter") {
+
+        createLink();
+
+    }
+
+});
+
+
+
+generateBtn.addEventListener("click", createLink);
+
+copyBtn.addEventListener("click", copyMain);
+
+backupBtn1.addEventListener("click", copyBackup1);
+
+backupBtn2.addEventListener("click", copyBackup2);
+
+
+
+async function createLink() {
+
+    let url = shopeeLink.value.trim();
+
+    if (!url) {
+
+        showToast("Vui lòng nhập link Shopee");
+
+        return;
+
+    }
+
+    if (!url.startsWith("http")) {
+
+        url = "https://" + url;
+
+    }
+
+    loading(true);
+
+    try {
+
+        const response = await fetch(API, {
+
+            method: "POST",
+
+            headers: {
+
+                "Content-Type": "application/json"
+
+            },
+
+            body: JSON.stringify({
+
+                url,
+
+                sub_id: subId.value.trim()
+
+            })
+
+        });
+
+        const json = await response.json();
+
+        if (!json.success) {
+
+            throw new Error(json.error);
+
+        }
+
+        const cleanLink = json.data.cleanLink;
+
+        const shortLink = json.data.buyLink;
+
+        const linkBuoc1 =
+            `https://s.shopee.vn/an_redir?origin_link=${encodeURIComponent(cleanLink)}&affiliate_id=${idBuoc1}`;
+
+        const template =
+`Cách lấy mã 25% FB, đảm bảo làm đủ 2 bước nhé
+
+Bước 1:
+${linkBuoc1}
+
+Bước 2:
+${shortLink}`;
+
+        outputLink.value = template;
+
+        backupTemplate1 =
+`Cách lấy mã 22% IG
+
+Bước 1:
+https://s.shopee.vn/an_redir?origin_link=${encodeURIComponent(cleanLink)}&affiliate_id=${idBackup1}
+
+Bước 2:
+${shortLink}`;
+
+        backupTemplate2 =
+`Cách lấy mã 22% FB
+
+Bước 1:
+https://s.shopee.vn/an_redir?origin_link=${encodeURIComponent(cleanLink)}&affiliate_id=${idBackup2}
+
+Bước 2:
+${shortLink}`;
+
+        resultBox.style.display = "block";
+
+        backupBox.style.display = "block";
+
+        statusText.className = "status success";
+
+        statusText.innerHTML = "✅ Link đã tạo thành công";
+
+        copyBtn.disabled = false;
+
+    }
+
+    catch (e) {
+
+        resultBox.style.display = "block";
+
+        backupBox.style.display = "none";
+
+        statusText.className = "status error";
+
+        statusText.innerHTML =
+            "❌ " + e.message;
+
+        outputLink.value = "";
+
+        copyBtn.disabled = true;
+
+    }
+
+    loading(false);
+
+}
+
+
+
+function loading(state) {
+
+    if (state) {
+
+        generateBtn.disabled = true;
+
+        generateBtn.innerHTML =
+            '<span class="spinner"></span>Đang tạo...';
+
+    }
+
+    else {
+
+        generateBtn.disabled = false;
+
+        generateBtn.innerHTML =
+            '<i class="fa-solid fa-bolt"></i> TẠO LINK';
+
+    }
+
+}
+
+
+
+async function copyMain() {
+
+    await navigator.clipboard.writeText(
+
+        outputLink.value
+
+    );
+
+    showToast("Đã sao chép");
+
+}
+
+
+
+async function copyBackup1() {
+
+    await navigator.clipboard.writeText(
+
+        backupTemplate1
+
+    );
+
+    showToast("Đã sao chép link IG");
+
+}
+
+
+
+async function copyBackup2() {
+
+    await navigator.clipboard.writeText(
+
+        backupTemplate2
+
+    );
+
+    showToast("Đã sao chép link FB");
+
+}
+
+
+
+function showToast(text) {
+
+    toast.innerHTML = text;
+
+    toast.classList.add("show");
+
+    setTimeout(() => {
+
+        toast.classList.remove("show");
+
+    }, 2200);
+
+}
