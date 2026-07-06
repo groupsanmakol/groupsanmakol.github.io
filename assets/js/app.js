@@ -1,4 +1,4 @@
-const API = "https://s.sanmakol.com";
+const API = "https://sanmakol-api.onedayofu01.workers.dev/";
 
 let idBuoc1 = "";
 let idBackup1 = "";
