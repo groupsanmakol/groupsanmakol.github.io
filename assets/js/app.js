@@ -28,7 +28,7 @@ const backupBtn1 = document.getElementById("backupBtn1");
 const backupBtn2 = document.getElementById("backupBtn2");
 
 const toast = document.getElementById("toast");
-
+const facebookBtn = document.getElementById("facebookBtn");
 
 
 shopeeLink.addEventListener("keydown", function (e) {
@@ -103,6 +103,11 @@ async function createLink() {
 
         }
 
+        // Cập nhật link bài viết Facebook
+if (json.data.facebookPost) {
+    facebookBtn.href = json.data.facebookPost;
+}
+
         const cleanLink = json.data.cleanLink;
 
         const shortLink = json.data.buyLink;
@@ -134,14 +139,14 @@ document.getElementById("productCashback").textContent =
     Number(json.data.cashbackRate).toFixed(2) + "%";
 
         backupTemplate1 =
-`Cách lấy mã 22% IG
+`Lấy mã 22% IG cần thao tác đủ 2 bước sau:
 Bước 1:
 https://s.shopee.vn/an_redir?origin_link=${encodeURIComponent(cleanLink)}&affiliate_id=${idBackup1}
 Bước 2:
 ${shortLink}`;
 
         backupTemplate2 =
-`Cách lấy mã 22% FB
+`Lấy mã 22% FB cần thao tác đủ 2 bước sau:
 Bước 1:
 https://s.shopee.vn/an_redir?origin_link=${encodeURIComponent(cleanLink)}&affiliate_id=${idBackup2}
 Bước 2:
