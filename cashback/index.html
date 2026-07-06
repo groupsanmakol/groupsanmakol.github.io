@@ -7,9 +7,78 @@
 
 <body>
 
-<h1>Cashback</h1>
+<section class="page-header">
 
-<p>Đang phát triển...</p>
+    <h1>💰 Tra cứu Cashback</h1>
 
+    <p>Tra cứu bằng ID đơn hàng hoặc số điện thoại.</p>
+
+</section>
+
+<section class="tool-card">
+
+    <div class="form-group">
+
+        <label>
+
+            <i class="fa-solid fa-magnifying-glass"></i>
+
+            ID đơn hàng hoặc SĐT
+
+        </label>
+
+        <input
+            id="cashbackKeyword"
+            type="text"
+            placeholder="260704RV9A79YT hoặc 09xxxxxxxx"
+        >
+
+    </div>
+
+    <button
+        id="searchCashbackBtn"
+        class="btn-primary">
+
+        TRA CỨU
+
+    </button>
+
+</section>
+
+
+  <section
+    class="result-card"
+    id="cashbackResult">
+
+    <h2>Kết quả</h2>
+
+    <div
+        class="status"
+        id="cashbackStatus">
+
+    </div>
+
+    <div
+        class="cashback-summary">
+
+        <div class="summary-title">
+
+            Tổng tiền hoàn dự kiến
+
+        </div>
+
+        <div
+            id="cashbackTotal"
+            class="summary-money">
+
+            0đ
+
+        </div>
+
+    </div>
+
+    <div id="cashbackList"></div>
+
+</section>
 </body>
 </html>
