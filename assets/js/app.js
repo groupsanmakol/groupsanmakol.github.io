@@ -28,6 +28,47 @@ const copyBtn = document.getElementById("copyBtn");
 const backupBtn1 = document.getElementById("backupBtn1");
 const backupBtn2 = document.getElementById("backupBtn2");
 
+
+async function loadCampaign() {
+
+    try {
+
+        const response =
+            await fetch(API + "/campaign");
+
+        const json =
+            await response.json();
+
+        if (!json.success) return;
+
+        idBuoc1 =
+            json.data.step1;
+
+        idBackup1 =
+            json.data.backupIG;
+
+        idBackup2 =
+            json.data.backupFB;
+
+        facebookPost =
+            json.data.facebookPost;
+
+        if (facebookBtn) {
+
+            facebookBtn.href =
+                facebookPost;
+
+        }
+
+    } catch (e) {
+
+        console.error(e);
+
+    }
+
+}
+
+
 const toast = document.getElementById("toast");
 const facebookBtn = document.getElementById("facebookBtn");
 
@@ -51,7 +92,7 @@ copyBtn.addEventListener("click", copyMain);
 backupBtn1.addEventListener("click", copyBackup1);
 
 backupBtn2.addEventListener("click", copyBackup2);
-
+loadCampaign();
 
 
 async function createLink() {
