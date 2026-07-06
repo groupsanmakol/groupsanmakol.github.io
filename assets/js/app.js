@@ -1,8 +1,9 @@
 const API = "https://s.sanmakol.com";
 
-const idBuoc1 = "17188580000";
-const idBackup1 = "17352550103";
-const idBackup2 = "17395740358";
+let idBuoc1 = "";
+let idBackup1 = "";
+let idBackup2 = "";
+let facebookPost = "";
 
 
 let mainTemplate = "";
