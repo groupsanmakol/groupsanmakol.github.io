@@ -4,6 +4,9 @@ const idBuoc1 = "17188580000";
 const idBackup1 = "17352550103";
 const idBackup2 = "17395740358";
 
+
+let mainTemplate = "";
+
 let backupTemplate1 = "";
 let backupTemplate2 = "";
 
@@ -114,6 +117,7 @@ ${linkBuoc1}
 Bước 2:
 ${shortLink}`;
 
+        mainTemplate = template;
         document.getElementById("productImage").src =
     json.data.image;
 
@@ -206,7 +210,7 @@ async function copyMain() {
 
     await navigator.clipboard.writeText(
 
-        outputLink.value
+        mainTemplate
 
     );
 
