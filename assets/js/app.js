@@ -1,6 +1,4 @@
 const API = "https://api.sanmakol.com";
-
-
 let idBuoc1 = "";
 let idBackup1 = "";
 let idBackup2 = "";
