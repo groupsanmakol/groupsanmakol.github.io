@@ -109,30 +109,37 @@ async function createLink() {
 
         const template =
 `Cách lấy mã 25% FB, đảm bảo làm đủ 2 bước nhé
-
 Bước 1:
 ${linkBuoc1}
-
 Bước 2:
 ${shortLink}`;
 
-        outputLink.value = template;
+        document.getElementById("productImage").src =
+    json.data.image;
+
+document.getElementById("productName").textContent =
+    json.data.name;
+
+document.getElementById("productPrice").textContent =
+    Number(json.data.price).toLocaleString("vi-VN") + "đ";
+
+document.getElementById("productCommission").textContent =
+    Number(json.data.commission).toLocaleString("vi-VN") + "đ";
+
+document.getElementById("productCashback").textContent =
+    Number(json.data.cashbackRate).toFixed(2) + "%";
 
         backupTemplate1 =
 `Cách lấy mã 22% IG
-
 Bước 1:
 https://s.shopee.vn/an_redir?origin_link=${encodeURIComponent(cleanLink)}&affiliate_id=${idBackup1}
-
 Bước 2:
 ${shortLink}`;
 
         backupTemplate2 =
 `Cách lấy mã 22% FB
-
 Bước 1:
 https://s.shopee.vn/an_redir?origin_link=${encodeURIComponent(cleanLink)}&affiliate_id=${idBackup2}
-
 Bước 2:
 ${shortLink}`;
 
