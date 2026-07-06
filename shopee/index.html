@@ -106,30 +106,60 @@
 
 </section>
 
-<section
-    class="result-card"
-    id="resultBox"
->
+<section class="result-card" id="resultBox">
 
-    <h2>
+    <h2>Kết quả</h2>
 
-        Kết quả
-
-    </h2>
-
-    <div
-        id="statusText"
-        class="status"
-    >
-
+    <div id="statusText" class="status">
         Chưa có dữ liệu.
-
     </div>
 
-    <textarea
-        id="outputLink"
-        readonly
-    ></textarea>
+    <!-- Product -->
+
+    <div class="product-card" id="productCard">
+
+        <img
+            id="productImage"
+            src="https://placehold.co/120x120?text=Shopee"
+            alt="Sản phẩm"
+        >
+
+        <div class="product-info">
+
+            <h3 id="productName">
+                Chưa có tên sản phẩm
+            </h3>
+
+            <div class="product-price">
+
+                Giá:
+                <strong id="productPrice">
+                    0đ
+                </strong>
+
+            </div>
+
+            <div class="product-commission">
+
+                Hoa hồng:
+                <strong id="productCommission">
+                    0đ
+                </strong>
+
+            </div>
+
+            <div class="product-cashback">
+
+                Cashback:
+                <strong id="productCashback">
+                    0%
+                </strong>
+
+            </div>
+
+        </div>
+
+    </div>
 
     <button
         id="copyBtn"
@@ -139,13 +169,14 @@
 
         <i class="fa-regular fa-copy"></i>
 
-        Sao chép nội dung
+        Sao chép mã Facebook 25%
 
     </button>
 
     <a
         class="btn-facebook"
-        href="https://www.facebook.com/share/p/1Cqkr26YVg/"
+        id="facebookPost"
+        href="#"
         target="_blank"
     >
 
@@ -156,7 +187,6 @@
     </a>
 
 </section>
-
 <section
     class="backup-card"
     id="backupBox"
