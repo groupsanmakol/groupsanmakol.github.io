@@ -39,6 +39,9 @@ async function loadCampaign() {
         const json =
             await response.json();
 
+        console.log(json);                  // <-- thêm
+        console.log(facebookBtn);           // <-- thêm
+        
         if (!json.success) return;
 
         idBuoc1 =
