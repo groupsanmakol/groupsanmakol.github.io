@@ -994,7 +994,23 @@ textarea{
     min-height:180px;
 
 }
+.product-card{
 
+    flex-direction:column;
+
+    align-items:center;
+
+    text-align:center;
+
+}
+
+.product-card img{
+
+    width:140px;
+
+    height:140px;
+
+}
 }
 
 @media(max-width:480px){
@@ -1040,5 +1056,89 @@ textarea{
     font-size:15px;
 
 }
+
+}
+
+/* =====================================
+   PRODUCT
+===================================== */
+
+.product-card{
+
+    display:flex;
+
+    gap:20px;
+
+    align-items:flex-start;
+
+    margin:20px 0;
+
+    padding:18px;
+
+    border:1px solid #eee;
+
+    border-radius:12px;
+
+    background:#fafafa;
+
+}
+
+.product-card img{
+
+    width:120px;
+
+    height:120px;
+
+    object-fit:cover;
+
+    border-radius:12px;
+
+    background:#fff;
+
+    border:1px solid #eee;
+
+}
+
+.product-info{
+
+    flex:1;
+
+}
+
+.product-info h3{
+
+    font-size:18px;
+
+    margin-bottom:15px;
+
+    line-height:1.5;
+
+}
+
+.product-price,
+.product-commission,
+.product-cashback{
+
+    margin-bottom:10px;
+
+    font-size:16px;
+
+}
+
+.product-price strong{
+
+    color:#ee4d2d;
+
+}
+
+.product-commission strong{
+
+    color:#198754;
+
+}
+
+.product-cashback strong{
+
+    color:#ff9800;
 
 }
