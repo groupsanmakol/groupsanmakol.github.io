@@ -1,1 +1,151 @@
+<!DOCTYPE html>
+<html lang="vi">
 
+<head>
+
+<meta charset="UTF-8">
+
+<meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0">
+
+<title>Tạo Link Hoàn Tiền</title>
+
+<link
+rel="stylesheet"
+href="../assets/css/style.css">
+
+<link
+rel="stylesheet"
+href="../assets/css/custom.css">
+
+<link
+rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+</head>
+
+<body>
+
+<header class="page-header">
+
+<h1>
+
+🔗 Tạo Link Hoàn Tiền
+
+</h1>
+
+<p>
+
+Dán link Shopee để tạo link hoàn tiền.
+
+</p>
+
+</header>
+
+
+<section class="tool-card">
+
+<div class="form-group">
+
+<input
+id="customLink"
+type="text"
+placeholder="https://s.shopee.vn/....">
+
+</div>
+
+<div class="form-group">
+
+<input
+id="customSubId"
+type="text"
+placeholder="Nhập SĐT hoặc Sub ID">
+
+</div>
+
+<button
+id="customBtn"
+class="btn-primary">
+
+TẠO LINK NGAY
+
+</button>
+
+</section>
+
+
+<section
+id="customResult"
+class="result-card"
+style="display:none;">
+
+<div class="product-card">
+
+<img
+id="productImage"
+src="">
+
+<div class="product-info">
+
+<h3
+id="productName">
+
+</h3>
+
+<div class="product-price">
+
+Giá:
+<span id="productPrice"></span>
+
+</div>
+
+<div class="product-cashback">
+
+💰 Hoàn tiền dự kiến:
+
+<span
+id="productCashback">
+
+</span>
+
+</div>
+
+</div>
+
+</div>
+
+
+<button
+id="copyCustomBtn"
+class="btn-copy">
+
+📋 Sao chép
+
+</button>
+
+<button
+id="buyNowBtn"
+class="btn-buy">
+
+🛒 Mua ngay
+
+</button>
+
+</section>
+
+
+<div
+id="toast"
+class="toast">
+
+</div>
+
+
+<script src="../assets/js/common.js"></script>
+
+<script src="../assets/js/custom.js"></script>
+
+</body>
+
+</html>
