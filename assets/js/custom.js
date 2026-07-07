@@ -102,11 +102,11 @@ function renderProduct(data){
     Number(data.price)
     .toLocaleString("vi-VN")+"đ";
 
-    document
-    .getElementById("productCashback")
-    .textContent=
-    Math.round(data.cashback)
-    .toLocaleString("vi-VN")+"đ";
+    document.getElementById("productCommission").textContent =
+    Number(json.data.commission).toLocaleString("vi-VN") + "đ";
+
+document.getElementById("productCashback").textContent =
+    Number(json.data.cashbackRate).toFixed(2) + "%";
 
     document
     .getElementById("copyCustomBtn")
