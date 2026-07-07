@@ -1,3 +1,16 @@
+const shopeeLink=document.getElementById("shopeeLink");
+
+if(!shopeeLink){
+
+    // Không phải trang Shopee
+
+}else{
+
+    initShopee();
+
+}
+
+function initShopee(){
 let idBuoc1 = "";
 let idBackup1 = "";
 let idBackup2 = "";
@@ -293,3 +306,4 @@ async function copyBackup2() {
     showToast("Đã sao chép link FB");
 
 }
+    }
