@@ -1,4 +1,3 @@
-const API = "https://i.sanmakol.com";
 
 const customLink =
 document.getElementById("customLink");
