@@ -386,8 +386,8 @@ if(!json.success){
 
 }
 
-renderCashback(json.data);
-
+renderCashback(json);
+    }
     catch(e){
 
         cashbackResult.style.display="block";
