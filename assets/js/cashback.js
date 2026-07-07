@@ -107,10 +107,7 @@ async function loadCashback() {
     catch (e) {
 
         cashbackResult.style.display = "block";
-        document
-.getElementById("cashbackUpdate")
-.innerHTML =
-"📅 " + (data.updateDate || "--");
+
 
         cashbackStatus.className = "status error";
 
