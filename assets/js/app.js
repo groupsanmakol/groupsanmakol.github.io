@@ -375,18 +375,18 @@ async function loadCashback(){
 
         });
 
-        const json=
-        await response.json();
+     const json =
+await response.json();
 
-        if(!json.success){
+console.log("Cashback API:", json);
 
-            throw new Error(json.error);
+if(!json.success){
 
-        }
+    throw new Error(json.error);
 
-        renderCashback(json.data);
+}
 
-    }
+renderCashback(json.data);
 
     catch(e){
 
