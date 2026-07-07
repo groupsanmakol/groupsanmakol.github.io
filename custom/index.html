@@ -108,65 +108,50 @@ id="customResult"
 class="result-card"
 style="display:none;">
 
-<div class="product-card">
+    <div class="product-card">
 
-<img
-id="productImage"
-src="">
+        <img
+        id="productImage"
+        src="">
 
-<div class="product-info">
+        <div class="product-info">
 
-<h3
-id="productName">
+            <h3 id="productName"></h3>
 
-</h3>
+            <div class="product-price">
+                Giá:
+                <span id="productPrice"></span>
+            </div>
 
-<div class="product-price">
+            <div class="product-commission">
+                Tiền hoàn dự kiến:
+                <span id="productCashback"></span>
+            </div>
 
-Giá:
-<span id="productPrice"></span>
+            <div class="product-rate">
+                Tỷ lệ hoàn:
+                <span id="productRate"></span>
+            </div>
 
-</div>
+        </div> <!-- product-info -->
 
-<div class="product-Commission">
+    </div> <!-- product-card -->
 
-💰 Hoàn tiền dự kiến:
+    <button
+    id="copyCustomBtn"
+    class="btn-copy">
 
-<span
-id="productCommission">
+        📋 Sao chép
 
-</span>
+    </button>
 
-    <div class="product-cashback">
+    <button
+    id="buyNowBtn"
+    class="btn-buy">
 
-Tỷ lệ hoàn:
+        🛒 Mua ngay
 
-<span
-id="productCashback">
-</span>
-
-</div>
-
-</div>
-
-</div>
-
-
-<button
-id="copyCustomBtn"
-class="btn-copy">
-
-📋 Sao chép
-
-</button>
-
-<button
-id="buyNowBtn"
-class="btn-buy">
-
-🛒 Mua ngay
-
-</button>
+    </button>
 
 </section>
 
