@@ -153,9 +153,12 @@ function renderCashback(data) {
     cashbackStatus.innerHTML =
         `✅ Tìm thấy ${data.orders.length} sản phẩm`;
 
-    cashbackTotal.innerHTML =
-        Number(data.totalCashback || 0)
-            .toLocaleString("vi-VN") + "đ";
+    const totalCashback = Math.round(
+    Number(data.totalCashback || 0)
+);
+
+cashbackTotal.innerHTML =
+    totalCashback.toLocaleString("vi-VN") + "đ";
 
     cashbackList.innerHTML = "";
 
