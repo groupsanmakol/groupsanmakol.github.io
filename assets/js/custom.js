@@ -1,4 +1,4 @@
-
+console.log("custom.js loaded");
 const customLink =
 document.getElementById("customLink");
 
