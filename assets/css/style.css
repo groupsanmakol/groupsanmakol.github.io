@@ -1067,6 +1067,58 @@ textarea{
     margin-bottom:4px;
 
 }
+.product-commission,
+.product-rate{
+
+    font-size:14px;
+
+    margin-top:6px;
+
+}
+
+.product-commission{
+
+    color:#ee4d2d;
+
+    font-weight:bold;
+
+}
+
+.product-rate{
+
+    color:#333;
+
+}
+
+.btn-buy{
+
+    width:100%;
+
+    margin-top:12px;
+
+    padding:14px 20px;
+
+    border:none;
+
+    border-radius:10px;
+
+    background:#32b51f;
+
+    color:#fff;
+
+    font-size:16px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+}
+
+.btn-buy:hover{
+
+    background:#2c9e1b;
+
+}
 .product-meta{
 
     margin-top:6px;
