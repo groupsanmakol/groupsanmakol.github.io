@@ -160,12 +160,16 @@ function renderCashback(data) {
     cashbackList.innerHTML = "";
 
     data.orders.forEach(item => {
-
+const orderTime = item.orderTime
+    ? item.orderTime
+        .replace("T", " ")
+        .replace(".000Z", "")
+    : "";
         cashbackList.innerHTML += `
 
 <div class="cashback-item">
 
-    <h3>${item.orderId}</h3>
+    
 
     <div class="cashback-row">
 
@@ -198,7 +202,7 @@ function renderCashback(data) {
         </span>
 
         <span class="cashback-value">
-            ${item.rate}%
+            ${(Number(item.rate) * 100).toLocaleString("vi-VN")}%
         </span>
 
     </div>
@@ -210,7 +214,7 @@ function renderCashback(data) {
         </span>
 
         <span class="cashback-value">
-            ${Number(item.cashback).toLocaleString("vi-VN")}đ
+            ${Math.round(Number(item.cashback)).toLocaleString("vi-VN")}đ
         </span>
 
     </div>
@@ -222,7 +226,7 @@ function renderCashback(data) {
         </span>
 
         <span class="cashback-value">
-            ${item.orderTime}
+            ${orderTime}
         </span>
 
     </div>
