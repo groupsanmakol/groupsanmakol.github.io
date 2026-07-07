@@ -1,4 +1,4 @@
-console.log("custom.js loaded");
+
 const customLink =
 document.getElementById("customLink");
 
@@ -84,6 +84,11 @@ async function createCustomLink(){
 
 function renderProduct(data){
 
+    document
+.getElementById("customStatus")
+.innerHTML =
+"✅ Link đã tạo thành công";
+    
     document
     .getElementById("customResult")
     .style.display="block";
