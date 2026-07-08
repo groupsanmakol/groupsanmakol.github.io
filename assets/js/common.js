@@ -1,4 +1,4 @@
-const API = "https://s.sanmakol.com";
+const API = "https://i.sanmakol.com";
 
 const toast = document.getElementById("toast");
 
