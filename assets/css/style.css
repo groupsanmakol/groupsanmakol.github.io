@@ -1324,3 +1324,64 @@ textarea{
 }
 
 }
+
+
+/* ===========================
+Guide
+=========================== */
+
+.tool-card h2{
+
+    color:#ee4d2d;
+
+    margin-bottom:18px;
+
+}
+
+.tool-card ol,
+
+.tool-card ul{
+
+    padding-left:22px;
+
+}
+
+.tool-card li{
+
+    margin:10px 0;
+
+    line-height:1.8;
+
+}
+
+.faq-item{
+
+    margin-top:18px;
+
+    padding:16px;
+
+    border:1px solid #eee;
+
+    border-radius:10px;
+
+    background:#fafafa;
+
+}
+
+.faq-item h3{
+
+    color:#ee4d2d;
+
+    margin-bottom:8px;
+
+    font-size:17px;
+
+}
+
+.faq-item p{
+
+    color:#555;
+
+    line-height:1.7;
+
+}
