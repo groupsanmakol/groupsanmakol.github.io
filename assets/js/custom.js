@@ -61,8 +61,6 @@ await fetch(API+"/custom",{
 
 });
 
-        });
-
         const json =
         await response.json();
 
@@ -91,7 +89,7 @@ await fetch(API+"/custom",{
 function renderProduct(data){
 
     document
-.("customStatus")
+.getElementById("customStatus")
 .innerHTML =
 "✅ Link đã tạo thành công";
     
