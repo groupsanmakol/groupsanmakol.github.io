@@ -134,7 +134,8 @@ async function loadCashback() {
 function renderCashback(data) {
 
     cashbackResult.style.display = "block";
-
+document.getElementById("cashbackUpdate").innerHTML =
+"📅 Cập nhật: " + (data.updateDate || "--");
     if (!data.orders || data.orders.length === 0) {
 
         cashbackStatus.className = "status error";
