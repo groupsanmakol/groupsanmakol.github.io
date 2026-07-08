@@ -16,7 +16,33 @@ function showToast(text){
 
     },2200);
 
-}
-const currentUser = JSON.parse(
+// =======================
+// User
+// =======================
+
+const currentUser =
+JSON.parse(
     localStorage.getItem("user") || "null"
 );
+function isLogin(){
+
+    return currentUser != null;
+
+}
+    function logout(){
+
+    localStorage.removeItem("user");
+
+    location.href="/login/";
+
+}
+
+function requireLogin(){
+
+    if(!currentUser){
+
+        location.href="/login/";
+
+    }
+
+}
