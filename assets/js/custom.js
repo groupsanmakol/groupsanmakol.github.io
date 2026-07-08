@@ -22,10 +22,7 @@ async function createCustomLink(){
     const url =
     customLink.value.trim();
 
-    const subId =
-    document.getElementById("customSubId")
-    .value
-    .trim();
+
 
     if(!url){
 
@@ -39,21 +36,30 @@ async function createCustomLink(){
 
     try{
 
-        const response =
-        await fetch(API + "/custom",{
+        const token =
+localStorage.getItem("token");
 
-            method:"POST",
+const response =
+await fetch(API+"/custom",{
 
-            headers:{
-                "Content-Type":"application/json"
-            },
+    method:"POST",
 
-            body:JSON.stringify({
+    headers:{
 
-                url,
-                sub_id:subId
+        "Content-Type":"application/json",
 
-            })
+        Authorization:
+        "Bearer "+token
+
+    },
+
+    body:JSON.stringify({
+
+        url
+
+    })
+
+});
 
         });
 
@@ -85,7 +91,7 @@ async function createCustomLink(){
 function renderProduct(data){
 
     document
-.getElementById("customStatus")
+.("customStatus")
 .innerHTML =
 "✅ Link đã tạo thành công";
     
