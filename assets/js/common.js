@@ -46,3 +46,80 @@ function requireLogin(){
     }
 
 }
+
+    function renderUserMenu(){
+
+    const box =
+    document.getElementById("userMenu");
+
+    if(!box) return;
+
+    if(!currentUser){
+
+        box.innerHTML=`
+
+<a href="/login/" class="login-link">
+
+Đăng nhập
+
+</a>
+
+`;
+
+        return;
+
+    }
+
+    box.innerHTML=`
+
+<div class="user-dropdown">
+
+<button id="userBtn">
+
+👤 ${currentUser.name}
+
+</button>
+
+<div class="dropdown-menu">
+
+<div>
+
+<b>${currentUser.name}</b>
+
+</div>
+
+<div>
+
+${currentUser.email}
+
+</div>
+
+<div>
+
+SubID:
+${currentUser.sub_id}
+
+</div>
+
+<hr>
+
+<button
+id="logoutBtn">
+
+Đăng xuất
+
+</button>
+
+</div>
+
+</div>
+
+`;
+
+    document
+    .getElementById("logoutBtn")
+    .onclick=logout;
+
+}
+
+renderUserMenu();
