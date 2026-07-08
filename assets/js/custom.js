@@ -22,7 +22,10 @@ async function createCustomLink(){
     const url =
     customLink.value.trim();
 
-
+    const subId =
+    document.getElementById("customSubId")
+    .value
+    .trim();
 
     if(!url){
 
@@ -36,30 +39,23 @@ async function createCustomLink(){
 
     try{
 
-        const token =
-localStorage.getItem("token");
+        const response =
+        await fetch(API + "/custom",{
 
-const response =
-await fetch(API+"/custom",{
+            method:"POST",
 
-    method:"POST",
+            headers:{
+                "Content-Type":"application/json"
+            },
 
-    headers:{
+            body:JSON.stringify({
 
-        "Content-Type":"application/json",
+                url,
+                sub_id:subId
 
-        Authorization:
-        "Bearer "+token
+            })
 
-    },
-
-    body:JSON.stringify({
-
-        url
-
-    })
-
-});
+        });
 
         const json =
         await response.json();
