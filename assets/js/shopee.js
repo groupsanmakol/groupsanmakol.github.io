@@ -172,10 +172,10 @@ if (json.data.facebookPost) {
             `https://s.shopee.vn/an_redir?origin_link=${encodeURIComponent(cleanLink)}&affiliate_id=${idBuoc1}`;
 
         const template =
-`Cách lấy mã 25% FB, đảm bảo làm đủ 2 bước nhé
-Bước 1:
+`Để lấy mã FB 25% cần làm theo 2 bước sau:
+Bước 1: Ấn mở link rồi quay lại (Không mua ở bước này):
 ${linkBuoc1}
-Bước 2:
+Bước 2: Ấn mở link rồi mua với mã giảm giá (Ghi nhận hoàn tiền):
 ${shortLink}`;
 
         mainTemplate = template;
@@ -195,17 +195,17 @@ document.getElementById("productCashback").textContent =
     Number(json.data.cashbackRate).toFixed(2) + "%";
 
         backupTemplate1 =
-`Lấy mã 22% IG cần thao tác đủ 2 bước sau:
-Bước 1:
+`Để lấy mã IG 22% cần làm theo 2 bước sau:
+Bước 1: Ấn mở link rồi quay lại (Không mua ở bước này):
 https://s.shopee.vn/an_redir?origin_link=${encodeURIComponent(cleanLink)}&affiliate_id=${idBackup1}
-Bước 2:
+Bước 2: Ấn mở link rồi mua với mã giảm giá (Ghi nhận hoàn tiền):
 ${shortLink}`;
 
         backupTemplate2 =
-`Lấy mã 22% FB cần thao tác đủ 2 bước sau:
-Bước 1:
+`Để lấy mã FB 22% cần làm theo 2 bước sau:
+Bước 1: Ấn mở link rồi quay lại (Không mua ở bước này):
 https://s.shopee.vn/an_redir?origin_link=${encodeURIComponent(cleanLink)}&affiliate_id=${idBackup2}
-Bước 2:
+Bước 2: Ấn mở link rồi mua với mã giảm giá (Ghi nhận hoàn tiền):
 ${shortLink}`;
 
         resultBox.style.display = "block";
