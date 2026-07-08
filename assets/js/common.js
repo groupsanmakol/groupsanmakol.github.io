@@ -17,3 +17,6 @@ function showToast(text){
     },2200);
 
 }
+const currentUser = JSON.parse(
+    localStorage.getItem("user") || "null"
+);
