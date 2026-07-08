@@ -68,14 +68,16 @@ async function login(){
         }
 
         localStorage.setItem(
+    "token",
+    json.token
+);
 
-            "user",
+localStorage.setItem(
+    "user",
+    JSON.stringify(json.user)
+);
 
-            JSON.stringify(json.user)
-
-        );
-
-        location.href="/";
+location.href="/";
 
     }
 
