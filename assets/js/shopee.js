@@ -158,11 +158,7 @@ if (!json.success) {
 
 }
 
-        if (!json.success) {
 
-            throw new Error(json.error);
-
-        }
 
         // Cập nhật link bài viết Facebook
 if (json.data.facebookPost) {
