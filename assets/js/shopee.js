@@ -7,7 +7,6 @@ if(!shopeeLink){
 }else{
 
     initShopee();
-
 }
 
 function initShopee(){
