@@ -1389,155 +1389,116 @@ Guide
 
 
 /* ==========================
-   PAY PAGE
+   TRANG RÚT TIỀN
 ========================== */
 
-.pay-header{
-    background:#fff;
-    border-radius:18px;
-    padding:45px 35px;
+.guide-header{
     text-align:center;
-    margin:30px 0;
-    box-shadow:0 10px 30px rgba(0,0,0,.06);
+    margin:45px 0;
 }
 
-.pay-header h1{
-    margin:0;
-    font-size:40px;
+.guide-header h1{
+    font-size:46px;
     color:#ff5a36;
+    margin-bottom:15px;
     font-weight:700;
 }
 
-.pay-header p{
-    margin-top:18px;
-    font-size:18px;
+.guide-header p{
+    font-size:22px;
     color:#666;
-    line-height:1.7;
-}
-
-.pay-card{
-    background:#fff;
-    border-radius:18px;
-    padding:30px;
-    margin-bottom:25px;
-    box-shadow:0 10px 25px rgba(0,0,0,.05);
-}
-
-.pay-title{
-    display:flex;
-    align-items:center;
-    gap:12px;
-    margin-bottom:20px;
-    font-size:28px;
-    font-weight:700;
-    color:#222;
-}
-
-.pay-title i{
-    color:#ff5a36;
-    font-size:30px;
-}
-
-.pay-card p{
-    font-size:17px;
     line-height:1.8;
-    color:#333;
-    margin:15px 0;
 }
 
-.pay-card ul{
-    margin:18px 0 0 24px;
+.guide-box{
+    background:#fff;
+    border-radius:20px;
+    padding:35px 40px;
+    margin-bottom:30px;
+    box-shadow:0 8px 24px rgba(0,0,0,.05);
+}
+
+.guide-box h2{
+    color:#ff5a36;
+    font-size:32px;
+    margin-bottom:25px;
+}
+
+.guide-box p{
+    font-size:18px;
+    line-height:1.9;
+    color:#333;
+}
+
+.guide-box ul{
+    margin:20px 0 0 25px;
     padding:0;
 }
 
-.pay-card li{
-    font-size:17px;
+.guide-box li{
+    font-size:18px;
     line-height:2;
-    color:#333;
 }
 
 .admin-phone{
-    display:inline-flex;
-    align-items:center;
-    gap:10px;
+    display:inline-block;
+    margin:15px 0;
+    padding:14px 24px;
+    border-radius:10px;
     background:#22c55e;
     color:#fff;
     text-decoration:none;
-    padding:14px 24px;
-    border-radius:10px;
-    font-size:20px;
     font-weight:700;
     transition:.25s;
 }
 
 .admin-phone:hover{
     background:#16a34a;
-    transform:translateY(-2px);
 }
 
 .notice{
     margin-top:20px;
-    background:#fff8e8;
-    border-left:5px solid #f59e0b;
-    border-radius:10px;
     padding:18px 22px;
-}
-
-.notice strong{
-    color:#d97706;
+    border-left:5px solid #f59e0b;
+    background:#fff7e6;
+    border-radius:10px;
 }
 
 .notice ul{
-    margin:12px 0 0 20px;
+    margin-top:15px;
 }
 
 .notice li{
     line-height:1.8;
 }
 
-.pay-card strong{
-    color:#ff5a36;
-}
-
-/* Mobile */
-
 @media (max-width:768px){
 
-    .pay-header{
-        padding:30px 20px;
-        margin:20px 0;
+    .guide-header h1{
+        font-size:34px;
     }
 
-    .pay-header h1{
-        font-size:30px;
-        line-height:1.4;
+    .guide-header p{
+        font-size:17px;
     }
 
-    .pay-header p{
-        font-size:16px;
+    .guide-box{
+        padding:25px;
     }
 
-    .pay-card{
-        padding:22px;
+    .guide-box h2{
+        font-size:25px;
     }
 
-    .pay-title{
-        font-size:22px;
-        line-height:1.5;
-    }
-
-    .pay-title i{
-        font-size:24px;
-    }
-
-    .pay-card p,
-    .pay-card li{
+    .guide-box p,
+    .guide-box li{
         font-size:16px;
     }
 
     .admin-phone{
         width:100%;
-        justify-content:center;
-        font-size:18px;
+        text-align:center;
+        box-sizing:border-box;
     }
+
 }
