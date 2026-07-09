@@ -11,7 +11,6 @@ if(!shopeeLink){
 }
 
 function initShopee(){
-let idBuoc1 = "";
 let idBackup1 = "";
 let idBackup2 = "";
 let facebookPost = "";
@@ -55,8 +54,7 @@ async function loadCampaign() {
         
         if (!json.success) return;
 
-        idBuoc1 =
-            json.data.step1;
+    
 
         idBackup1 =
             json.data.backupIG;
