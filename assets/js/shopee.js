@@ -168,8 +168,8 @@ if (json.data.facebookPost) {
 
         const shortLink = json.data.buyLink;
 
-        const linkBuoc1 =
-            `https://s.shopee.vn/an_redir?origin_link=${encodeURIComponent(cleanLink)}&affiliate_id=${idBuoc1}`;
+        const linkBuoc1 = json.data.step1Link;
+
 
         const template =
 `Để lấy mã FB 25% cần làm theo 2 bước sau:
@@ -307,3 +307,5 @@ async function copyBackup2() {
 
 }
     }
+
+
