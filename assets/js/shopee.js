@@ -149,6 +149,15 @@ async function createLink() {
 
         const json = await response.json();
 
+console.log("===== API RESPONSE =====");
+console.log(json);
+
+if (!json.success) {
+
+    throw new Error(json.error);
+
+}
+
         if (!json.success) {
 
             throw new Error(json.error);
