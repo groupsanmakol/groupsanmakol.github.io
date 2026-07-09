@@ -1387,3 +1387,157 @@ Guide
 }
 
 
+
+/* ==========================
+   PAY PAGE
+========================== */
+
+.pay-header{
+    background:#fff;
+    border-radius:18px;
+    padding:45px 35px;
+    text-align:center;
+    margin:30px 0;
+    box-shadow:0 10px 30px rgba(0,0,0,.06);
+}
+
+.pay-header h1{
+    margin:0;
+    font-size:40px;
+    color:#ff5a36;
+    font-weight:700;
+}
+
+.pay-header p{
+    margin-top:18px;
+    font-size:18px;
+    color:#666;
+    line-height:1.7;
+}
+
+.pay-card{
+    background:#fff;
+    border-radius:18px;
+    padding:30px;
+    margin-bottom:25px;
+    box-shadow:0 10px 25px rgba(0,0,0,.05);
+}
+
+.pay-title{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    margin-bottom:20px;
+    font-size:28px;
+    font-weight:700;
+    color:#222;
+}
+
+.pay-title i{
+    color:#ff5a36;
+    font-size:30px;
+}
+
+.pay-card p{
+    font-size:17px;
+    line-height:1.8;
+    color:#333;
+    margin:15px 0;
+}
+
+.pay-card ul{
+    margin:18px 0 0 24px;
+    padding:0;
+}
+
+.pay-card li{
+    font-size:17px;
+    line-height:2;
+    color:#333;
+}
+
+.admin-phone{
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+    background:#22c55e;
+    color:#fff;
+    text-decoration:none;
+    padding:14px 24px;
+    border-radius:10px;
+    font-size:20px;
+    font-weight:700;
+    transition:.25s;
+}
+
+.admin-phone:hover{
+    background:#16a34a;
+    transform:translateY(-2px);
+}
+
+.notice{
+    margin-top:20px;
+    background:#fff8e8;
+    border-left:5px solid #f59e0b;
+    border-radius:10px;
+    padding:18px 22px;
+}
+
+.notice strong{
+    color:#d97706;
+}
+
+.notice ul{
+    margin:12px 0 0 20px;
+}
+
+.notice li{
+    line-height:1.8;
+}
+
+.pay-card strong{
+    color:#ff5a36;
+}
+
+/* Mobile */
+
+@media (max-width:768px){
+
+    .pay-header{
+        padding:30px 20px;
+        margin:20px 0;
+    }
+
+    .pay-header h1{
+        font-size:30px;
+        line-height:1.4;
+    }
+
+    .pay-header p{
+        font-size:16px;
+    }
+
+    .pay-card{
+        padding:22px;
+    }
+
+    .pay-title{
+        font-size:22px;
+        line-height:1.5;
+    }
+
+    .pay-title i{
+        font-size:24px;
+    }
+
+    .pay-card p,
+    .pay-card li{
+        font-size:16px;
+    }
+
+    .admin-phone{
+        width:100%;
+        justify-content:center;
+        font-size:18px;
+    }
+}
