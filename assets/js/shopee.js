@@ -7,12 +7,15 @@ if(!shopeeLink){
 }else{
 
     initShopee();
+
 }
 
 function initShopee(){
+let idBuoc1 = "";
 let idBackup1 = "";
 let idBackup2 = "";
 let facebookPost = "";
+
 
 let mainTemplate = "";
 
@@ -52,7 +55,8 @@ async function loadCampaign() {
         
         if (!json.success) return;
 
-    
+        idBuoc1 =
+            json.data.step1;
 
         idBackup1 =
             json.data.backupIG;
@@ -149,16 +153,11 @@ async function createLink() {
 
         const json = await response.json();
 
-console.log("===== API RESPONSE =====");
-console.log(json);
+        if (!json.success) {
 
-if (!json.success) {
+            throw new Error(json.error);
 
-    throw new Error(json.error);
-
-}
-
-
+        }
 
         // Cập nhật link bài viết Facebook
 if (json.data.facebookPost) {
@@ -169,8 +168,8 @@ if (json.data.facebookPost) {
 
         const shortLink = json.data.buyLink;
 
-        const linkBuoc1 = json.data.step1Link;
-
+        const linkBuoc1 =
+            `https://s.shopee.vn/an_redir?origin_link=${encodeURIComponent(cleanLink)}&affiliate_id=${idBuoc1}`;
 
         const template =
 `Để lấy mã FB 25% cần làm theo 2 bước sau:
