@@ -15,7 +15,6 @@ let idBackup1 = "";
 let idBackup2 = "";
 let facebookPost = "";
 
-
 let mainTemplate = "";
 
 let backupTemplate1 = "";
